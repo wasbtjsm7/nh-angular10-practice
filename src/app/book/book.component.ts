@@ -7,9 +7,12 @@ import { Component, Input, OnChanges, SimpleChanges, OnInit, OnDestroy } from '@
 })
 export class BookComponent implements OnChanges, OnInit, OnDestroy {
   @Input() book;
+  @Input() coverWith: number;
 
   constructor() {
     console.log(`life cycle Angular: contructor`);
+    this.coverWith = 200;
+    console.log(`contructor coverWith: ${this.coverWith}`);
   }
 
   ngOnChanges(change: SimpleChanges): void {
@@ -18,6 +21,7 @@ export class BookComponent implements OnChanges, OnInit, OnDestroy {
 
   ngOnInit(): void {
     console.log(`life cycle Angular: ngOnInit`);
+    console.log(`ngOnInit coverWith: ${this.coverWith}`);
   }
 
   ngOnDestroy(): void {
