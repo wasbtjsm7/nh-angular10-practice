@@ -3,7 +3,7 @@ import { Component, Input, OnChanges, SimpleChanges, OnInit, OnDestroy } from '@
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
-  styles: []
+  styleUrls: ['./book.component.scss']
 })
 export class BookComponent implements OnChanges, OnInit, OnDestroy {
   @Input() book;
