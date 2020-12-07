@@ -46,8 +46,14 @@ export class AppComponent {
       coverUrl: 'https://uploads-ssl.webflow.com/5f280c5b57d2edfcbbb057ea/5f295fc0407ae2a76fdc6219_6.jpg'
     }
   ];
+  booksCounter = 0;
 
   delete(): void {
     this.displayNone = this.displayNone ? '' : 'none';
+  }
+
+  addBook(bookCounter: number): void {
+    this.booksCounter += bookCounter;
+    console.log(`valor emitido ${bookCounter}`);
   }
 }

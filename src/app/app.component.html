@@ -49,9 +49,11 @@
     <li *ngFor="let directive of directives"> {{ directive }}</li>
   </ul>
 </div>
-
+<div>
+  <p>Total de libros reservados: {{ booksCounter }}</p>
+</div>
 <h2>Componente personalizada</h2>
 <div id="practiceComponent">
-  <app-book *ngFor="let book of books" [book]="book" [coverWith]="300"></app-book>
+  <app-book *ngFor="let book of books" [book]="book" [coverWith]="300" (clickBook)="addBook( $event )"></app-book>
 </div>
 <router-outlet></router-outlet>

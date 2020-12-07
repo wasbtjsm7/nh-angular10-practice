@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-book',
@@ -8,11 +8,13 @@ import { Component, Input, OnChanges, SimpleChanges, OnInit, OnDestroy } from '@
 export class BookComponent implements OnChanges, OnInit, OnDestroy {
   @Input() book;
   @Input() coverWith: number;
+  @Output() clickBook: EventEmitter<number>;
 
   constructor() {
     console.log(`life cycle Angular: contructor`);
     this.coverWith = 200;
     console.log(`contructor coverWith: ${this.coverWith}`);
+    this.clickBook = new EventEmitter();
   }
 
   ngOnChanges(change: SimpleChanges): void {
@@ -26,5 +28,12 @@ export class BookComponent implements OnChanges, OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     console.log(`life cycle Angular: ngOnDestroy`);
+  }
+
+  chooseBook(): void {
+    console.log(
+      `se esta reservado el libro ${this.book.title}`
+    );
+    this.clickBook.emit(1);
   }
 }
