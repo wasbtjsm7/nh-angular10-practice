@@ -1,0 +1,9 @@
+<h2>Carrito</h2>
+<div *ngIf="itemBook">
+  <p>Total de libros reservados: {{ booksCounter }}</p>
+  <ul>
+    <li *ngFor="let item of selectedBooks">
+      {{ item.book.title }} - {{ item.count }}
+    </li>
+  </ul>
+</div>

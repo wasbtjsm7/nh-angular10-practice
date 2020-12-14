@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnInit, OnDestroy } from '@angular/core';
+import { Book } from './book';
 
 @Component({
   selector: 'app-book',
@@ -6,9 +7,9 @@ import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnIni
   styleUrls: ['./book.component.scss']
 })
 export class BookComponent implements OnChanges, OnInit, OnDestroy {
-  @Input() book;
+  @Input() book: Book;
   @Input() coverWith: number;
-  @Output() clickBook: EventEmitter<number>;
+  @Output() clickBook: EventEmitter<Book>;
 
   constructor() {
     console.log(`life cycle Angular: contructor`);
@@ -34,6 +35,6 @@ export class BookComponent implements OnChanges, OnInit, OnDestroy {
     console.log(
       `se esta reservado el libro ${this.book.title}`
     );
-    this.clickBook.emit(1);
+    this.clickBook.emit(this.book);
   }
 }
