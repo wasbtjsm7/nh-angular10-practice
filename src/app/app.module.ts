@@ -10,16 +10,14 @@ import { BooksComponent as BooksListComponent} from './books/books.component';
 import { CarComponent } from './car/car.component';
 import { TotalCarComponent } from './car/total-car/total-car.component';
 import { DetailCarComponent } from './car/detail-car/detail-car.component';
-import { HomeComponent } from './pages/home/home.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
-import { LoginComponent } from './pages/login/login.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { RegisterComponent } from './pages/register/register.component';
 import { BooksComponent } from './pages/books/books.component';
 import { BookComponent } from './pages/books/book/book.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { LayoutComponent } from './pages/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -31,16 +29,14 @@ import { FooterComponent } from './pages/footer/footer.component';
     CarComponent,
     TotalCarComponent,
     DetailCarComponent,
-    HomeComponent,
     CategoriesComponent,
-    LoginComponent,
     ContactComponent,
-    RegisterComponent,
     BooksComponent,
     NotFoundComponent,
     BookComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
