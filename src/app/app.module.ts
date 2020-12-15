@@ -4,23 +4,43 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { BookComponent } from './books/book/book.component';
-import { ExampleComponent } from './example/example.component';
-import { BooksComponent } from './books/books.component';
+import { BookComponent as BookDetailComponent } from './books/book/book.component';
+import { ExampleComponent } from './pages/example/example.component';
+import { BooksComponent as BooksListComponent} from './books/books.component';
 import { CarComponent } from './car/car.component';
 import { TotalCarComponent } from './car/total-car/total-car.component';
 import { DetailCarComponent } from './car/detail-car/detail-car.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { BooksComponent } from './pages/books/books.component';
+import { BookComponent } from './pages/books/book/book.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HeaderComponent } from './pages/header/header.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
-    BookComponent,
+    BookDetailComponent,
     ExampleComponent,
-    BooksComponent,
+    BooksListComponent,
     CarComponent,
     TotalCarComponent,
-    DetailCarComponent
+    DetailCarComponent,
+    HomeComponent,
+    CategoriesComponent,
+    LoginComponent,
+    ContactComponent,
+    RegisterComponent,
+    BooksComponent,
+    NotFoundComponent,
+    BookComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
