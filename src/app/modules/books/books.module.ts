@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { BooksRoutingModule } from './books-routing.module';
 import { BooksComponent as BooksPageComponent } from './pages/books/books.component';
 import { BookComponent as BookPageComponent } from './pages/book/book.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
+
 import { BooksComponent } from './components/books/books.component';
 import { BookComponent } from './components/books/book/book.component';
 
@@ -12,7 +14,8 @@ import { BookComponent } from './components/books/book/book.component';
     BooksPageComponent,
     BookPageComponent,
     BooksComponent,
-    BookComponent
+    BookComponent,
+    CategoriesComponent
   ],
   imports: [
     CommonModule,

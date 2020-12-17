@@ -7,7 +7,6 @@ import { HelloComponent } from './hello.component';
 import { CarComponent } from './car/car.component';
 import { TotalCarComponent } from './car/total-car/total-car.component';
 import { DetailCarComponent } from './car/detail-car/detail-car.component';
-import { CategoriesComponent } from './pages/categories/categories.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeaderComponent } from './pages/header/header.component';
@@ -21,7 +20,6 @@ import { LayoutComponent } from './pages/layout/layout.component';
     CarComponent,
     TotalCarComponent,
     DetailCarComponent,
-    CategoriesComponent,
     ContactComponent,
     NotFoundComponent,
     HeaderComponent,
