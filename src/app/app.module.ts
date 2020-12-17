@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { BookComponent as BookDetailComponent } from './books/book/book.component';
-import { ExampleComponent } from './pages/example/example.component';
 import { BooksComponent as BooksListComponent} from './books/books.component';
 import { CarComponent } from './car/car.component';
 import { TotalCarComponent } from './car/total-car/total-car.component';
@@ -24,7 +23,6 @@ import { LayoutComponent } from './pages/layout/layout.component';
     AppComponent,
     HelloComponent,
     BookDetailComponent,
-    ExampleComponent,
     BooksListComponent,
     CarComponent,
     TotalCarComponent,

@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ExampleComponent } from './pages/example/example.component';
-import { HomeComponent } from './home/pages/home/home.component';
 import { BooksComponent } from './pages/books/books.component';
 import { BookComponent } from './pages/books/book/book.component';
 import { ContactComponent } from './pages/contact/contact.component';
@@ -20,11 +18,11 @@ const routes: Routes = [
       },
       {
         path: 'home',
-        loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+        loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
       },
       {
         path: 'auth',
-        loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+        loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
       },
       {
         path: 'books',
@@ -40,7 +38,7 @@ const routes: Routes = [
       },
       {
         path: 'example',
-        component: ExampleComponent
+        loadChildren: () => import('./modules/example/example.module').then(m => m.ExampleModule)
       }
     ]
   },
