@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BooksComponent } from './pages/books/books.component';
-import { BookComponent } from './pages/books/book/book.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { LayoutComponent } from './pages/layout/layout.component';
@@ -26,11 +24,7 @@ const routes: Routes = [
       },
       {
         path: 'books',
-        component: BooksComponent
-      },
-      {
-        path: 'books/:id',
-        component: BookComponent
+        loadChildren: () => import('./modules/books/books.module').then(m => m.BooksModule)
       },
       {
         path: 'contact',
