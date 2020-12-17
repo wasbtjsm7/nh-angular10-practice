@@ -41,13 +41,13 @@ const routes: Routes = [
       {
         path: 'example',
         component: ExampleComponent
-      },
-      {
-        path: '**',
-        component: NotFoundComponent
       }
     ]
-  }  
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
 ];
 
 @NgModule({
